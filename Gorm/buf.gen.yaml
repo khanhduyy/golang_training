@@ -1,0 +1,15 @@
+version: v1
+plugins:
+  - name: go
+    out: rpc/product
+    opt: 
+      - paths=source_relative
+  - name: go-grpc
+    out: rpc/product
+    opt:
+      - paths=source_relative
+      - require_unimplemented_servers=false
+  - name: grpc-gateway
+    out: rpc/product
+      - paths=source_relative
+      - allow_repeated_fields_in_body=true
